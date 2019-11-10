@@ -31,5 +31,5 @@
       "passwordField": "password"
     }
   },
-  "postgres": "postgres://postgres:@localhost:5432/silent_auction"
+  "postgres": "postgres://xdkczijahctigo:d92bae952c1c9161ccb1eed94909c954571d12bc786d0a6ddb67d335151f52be@ec2-176-34-183-20.eu-west-1.compute.amazonaws.com:5432/d4oifrfiv2rctb"
 }
