@@ -18,12 +18,12 @@ module.exports = function(options = {}) {
         errors: { current_price: 'Bidding price is lower than the current top bid price. Try a higher price.' }
       });
     }
-*/
+
     return hook.app.service('auctions').get(hook.id).then(auction => {
       const price = 1;
       hook.data.current_price = price + parseFloat(hook.data.current_price);
       return hook;
     });
-
+*/
   };
 };
