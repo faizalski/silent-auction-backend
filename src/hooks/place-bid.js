@@ -10,14 +10,17 @@ module.exports = function(options = {}) {
     if (hook.data.update) {
       return hook;
     }
-    if (parseFloat(hook.data.current_price) <= 0) {
-      throw new errors.BadRequest('Invalid Parameters', {
-        errors: { current_price: 'Has to be greater than or equal to 0' }
-      });
-    }
 
 
-    if (hook.switcher == 1) {
+
+    if (auction.switcher == 1) {
+
+      if (parseFloat(hook.data.current_price) <= 0) {
+        throw new errors.BadRequest('Invalid Parameters', {
+          errors: { current_price: 'Has to be greater than or equal to 0' }
+        });
+      }
+
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = parseFloat(auction.current_price);
           hook.data.current_price = price + parseFloat(hook.data.current_price);
@@ -25,7 +28,7 @@ module.exports = function(options = {}) {
         });
     }
 
-    if (hook.switcher == 2) {
+    if (auction.switcher == 2) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = 1;
           hook.data.current_price = price + parseFloat(hook.data.current_price);
