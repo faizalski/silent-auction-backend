@@ -8,6 +8,8 @@ const addTopBidder = require('../../hooks/add-top-bidder');
 
 const placeBid = require('../../hooks/place-bid');
 
+const placeBidAmount = require('../../hooks/place-bid-amount');
+
 const userAuctionsSchema = { include: [
     {
       service: 'users',
@@ -40,7 +42,7 @@ module.exports = {
       }),
     ],
     update: [],
-    patch: [addTopBidder(), placeBid()],
+    patch: [addTopBidder(), placeBid(), placeBidAmount()],
     remove: []
   },
 
