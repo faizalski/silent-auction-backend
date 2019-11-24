@@ -13,7 +13,7 @@ module.exports = function(options = {}) {
 
 
 
-    if (hook.data.switcher == 1) {
+  //  if (hook.data.switcher == 1) {
 
       if (parseFloat(hook.data.current_price) <= 0) {
         throw new errors.BadRequest('Invalid Parameters', {
@@ -26,7 +26,7 @@ module.exports = function(options = {}) {
           hook.data.current_price = price + parseFloat(hook.data.current_price);
           return hook;
         });
-    }
+  //  }
 
     if (hook.data.switcher == 2) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
