@@ -17,7 +17,7 @@ module.exports = function(options = {}) {
     }
 
 
-    if (hook.switcher) == 1) {
+    if (hook.switcher == 1) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = parseFloat(auction.current_price);
           hook.data.current_price = price + parseFloat(hook.data.current_price);
@@ -25,7 +25,7 @@ module.exports = function(options = {}) {
         });
     }
 
-    if (hook.switcher) == 2) {
+    if (hook.switcher == 2) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = 1;
           hook.data.current_price = price + parseFloat(hook.data.current_price);
