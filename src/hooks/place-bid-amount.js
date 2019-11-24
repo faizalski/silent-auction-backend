@@ -11,13 +11,13 @@ module.exports = function(options = {}) {
     if (hook.data.update) {
       return hook;
     }
-
+/*
     if (parseFloat(hook.data.current_price) <= parseFloat(auction.current_price)) {
       throw new errors.BadRequest('Offered bidding price below current bid price', {
         errors: { current_price: 'Bidding price is lower than the current top bid price. Try a higher price.' }
       });
     }
-
+*/
 
 
   };
