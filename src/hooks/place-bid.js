@@ -27,7 +27,7 @@ module.exports = function(options = {}) {
           return hook;
         });
   //  }
-
+/*
     if (hook.data.switcher == 2) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = 1;
@@ -35,7 +35,7 @@ module.exports = function(options = {}) {
           return hook;
         });
     }
-
+*/
 
   };
 };
