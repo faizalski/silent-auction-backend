@@ -19,7 +19,7 @@ module.exports = function(options = {}) {
     }
 */
     return hook.app.service('auctions').get(hook.id).then(auction => {
-      const price = parseFloat(auction.current_price);
+      const price = 999;
       hook.data.current_price = price + parseFloat(hook.data.current_price);
       return hook;
     });
