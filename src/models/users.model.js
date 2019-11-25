@@ -7,7 +7,7 @@ const Sequelize = require('sequelize');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const users = sequelizeClient.define('users', {
-  
+
     username: {
       type: Sequelize.STRING,
       allowNull: true,
@@ -22,8 +22,11 @@ module.exports = function (app) {
       type: Sequelize.STRING,
       allowNull: true
     },
-  
-  
+    userrole: {
+      type: Sequelize.INTEGER,
+      allowNull: true
+    },  
+
   }, {
     classMethods: {
       associate (models) { // eslint-disable-line no-unused-vars
