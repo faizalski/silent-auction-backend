@@ -15,6 +15,10 @@ module.exports = function (app) {
       type: Sequelize.STRING,
       allowNull: false
     },
+    itemimage: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
     current_price: {
       type: Sequelize.DECIMAL(10, 2),
       allowNull: false
