@@ -25,7 +25,15 @@ module.exports = function(options = {}) {
           const price = parseFloat(auction.current_price);
           hook.data.current_price = price + parseFloat(hook.data.current_price);
 
-          auction.bidlog = auction.bidlog + ", " +  price ;
+
+          var str1 = hook.data.bidlog;
+          var str2 = " , " +  price ;
+          var res = str1.concat(str2);
+
+          hook.data.bidlog = res;
+
+
+
 
           return hook;
         });
