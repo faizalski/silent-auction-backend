@@ -26,11 +26,10 @@ module.exports = function(options = {}) {
           hook.data.current_price = price + parseFloat(hook.data.current_price);
 
 
-          var str1 = hook.data.bidlog;
-          var str2 = " , " +  price ;
-          var res = str1.concat(str2);
+          var str1 = hook.data.bidlog + " , Momo ,";
 
-          hook.data.bidlog = res;
+
+          hook.data.bidlog = str1;
 
 
 
