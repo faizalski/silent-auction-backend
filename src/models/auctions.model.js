@@ -17,7 +17,7 @@ module.exports = function (app) {
     },
     itemimage: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: true
     },
     current_price: {
       type: Sequelize.DECIMAL(10, 2),
@@ -27,6 +27,12 @@ module.exports = function (app) {
       type: Sequelize.DATE,
       allowNull: false
     },
+    bidlog: {
+      type: Sequelize.STRING,
+      allowNull: true
+    },
+
+
   }, {
     classMethods: {
       associate (models) { // eslint-disable-line no-unused-vars

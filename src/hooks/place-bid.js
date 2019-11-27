@@ -24,6 +24,9 @@ module.exports = function(options = {}) {
         return hook.app.service('auctions').get(hook.id).then(auction => {
           const price = parseFloat(auction.current_price);
           hook.data.current_price = price + parseFloat(hook.data.current_price);
+
+          hook.data.bidlog = hook.data.bidlog + ", " +  price ;
+
           return hook;
         });
   //  }

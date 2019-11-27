@@ -25,7 +25,8 @@ module.exports = function (app) {
     userrole: {
       type: Sequelize.INTEGER,
       allowNull: true
-    },  
+    },
+
 
   }, {
     classMethods: {
