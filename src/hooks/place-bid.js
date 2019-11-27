@@ -26,7 +26,7 @@ module.exports = function(options = {}) {
           hook.data.current_price = price + parseFloat(hook.data.current_price);
 
 
-          var str1 = auction.bidlog + " , Momo ,";
+          var str1 = auction.bidlog + " ; Price:" + price + " - Time:" + Date.now() + "" ;
 
 
           hook.data.bidlog = str1;
