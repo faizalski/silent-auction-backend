@@ -25,7 +25,7 @@ module.exports = function(options = {}) {
           const price = parseFloat(auction.current_price);
           hook.data.current_price = price + parseFloat(hook.data.current_price);
 
-          var incrementa = price - parseFloat(hook.data.current_price);
+          var incrementa = parseFloat(hook.data.current_price) - price;
           var str1 = auction.bidlog + " ; BidderID:" + hook.params.user.id + " - BidderName:" + hook.params.user.username + " - Bidprice:" + parseFloat(hook.data.current_price) + " - Increment:" + incrementa + " - Time:" + NOW() + "" ;
           hook.data.bidlog = str1;
 
